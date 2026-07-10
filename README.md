@@ -275,6 +275,15 @@ By building a rolling user-input window of the last 5 turns:
 ### 5. Verified Professional Endorsements
 ![Trusted By Mental Health Experts](preview/testimonials/testimonials.png)
 
+### 6. Interactive Chat Workspace & Diagnosis Panel
+![MindCare AI Chat Workspace](preview/chat/chat.png)
+
+### 7. Core Analytics Performance Cards (Dashboard)
+![MindCare AI Dashboard Metrics](preview/dashboard/dashboard_top.png)
+
+### 8. Sentiment Timelines & Prediction History Logs
+![MindCare AI Dashboard History Logs](preview/dashboard/dashboard_bottom.png)
+
 ---
 
 ## 📄 License
