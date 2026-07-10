@@ -258,6 +258,25 @@ By building a rolling user-input window of the last 5 turns:
 
 ---
 
+## 📸 Platform Previews & Screenshots
+
+### 1. Modern Workspace Hero Landing
+![MindCare AI Landing Page](preview/home/hero.png)
+
+### 2. Workspace Core Features
+![Integrated Workspace Core Features](preview/features/features.png)
+
+### 3. Systematic Treatment Workflow
+![How MindCare AI Works](preview/workflow/workflow.png)
+
+### 4. Clinical Privacy & HIPAA Protocols
+![Clinical Quality Meets Personal Privacy](preview/privacy/privacy.png)
+
+### 5. Verified Professional Endorsements
+![Trusted By Mental Health Experts](preview/testimonials/testimonials.png)
+
+---
+
 ## 📄 License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
