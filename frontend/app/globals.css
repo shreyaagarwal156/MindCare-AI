@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* ── Custom Theme Tokens & Color Palette ────────────────────────── */
+:root {
+  --background: #F8FAFC;
+  --foreground: #111827;
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --secondary: #1E40AF;
+  --accent: #3B82F6;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+/* Dark mode mapping */
+.dark {
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --primary: #3B82F6;
+  --primary-hover: #60A5FA;
+  --secondary: #1E40AF;
+  --accent: #2563EB;
+  --card: #1E293B;
+  --card-foreground: #F8FAFC;
+  --muted: #94A3B8;
+  --border: #334155;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-text: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* ── Reset and Base Rules ───────────────────────────────────────── */
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Premium Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ── Premium Layout Classes ─────────────────────────────────────── */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dark .glassmorphism {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glassmorphism-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ambient glow blobs */
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .glow-blob {
+  opacity: 0.22;
+}
+
+/* 3D Depth Card Rotation */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.perspective-card {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+/* Animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(-8deg) rotateX(3deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateY(-9deg) rotateX(4deg) scale(1.01);
+  }
+}
+
+.animate-perspective-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glowing-ring {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.glow-hover-card:hover {
+  animation: pulse-glowing-ring 3s infinite;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+/* Typer cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary); }
+}
+
+.chat-caret {
+  border-right: 2px solid var(--primary);
+  animation: blink-caret 0.75s step-end infinite;
+}

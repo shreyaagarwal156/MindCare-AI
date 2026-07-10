@@ -1,0 +1,76 @@
+# ── Python Cache & Compiled Files ─────────────────
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+.pytest_cache/
+.cache/
+
+# ── Virtual Environments ──────────────────────────
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+backend/env/
+
+# ── Environment Variables ────────────────────────
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# ── IDEs, Editors & OS Files ──────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Node / Next.js / Build Artifacts ─────────────
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+.turbo/
+frontend/.turbo/
+dist/
+build/
+*.egg-info/
+frontend/package-lock.json
+
+# ── Jupyter Checkpoints & Databases ───────────────
+.ipynb_checkpoints/
+.virtual_documents/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Machine Learning Artifacts & Models ───────────
+*.csv
+*.arrow
+processed_data/
+ml-original/processed_data/
+*.pt
+*.pth
+*.bin
+*.h5
+*.pkl
+*.onnx
+*.weights
+ml-original/final_mental_health_model/pytorch_model.bin
+ml-original/final_mental_health_model/config.json
+
+# ── Logs and Database Local Cache ─────────────────
+logs/
+*.log
+rlhf_logs.csv
+backend/rlhf_logs.csv
+db.sqlite3
