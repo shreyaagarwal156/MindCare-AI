@@ -294,4 +294,4 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for more informati
 
 ## 👥 Author
 
-Developed and Architected by **Shreya** and team. Crafting production-grade mental health analytics workspaces.
+Developed and Architected by **Shreya**. Crafting production-grade mental health analytics workspaces.
